@@ -1,31 +1,18 @@
-import '../styles/App.scss';
-import SearchBar from './searchbar';
-import Footer from './Footer';
-import HeaderSlider from './HeaderSlider';
-import Account from './account';
-import Cart from './Cart';
-import Sidebar from './Sidebar';
-import ItemContainer from "./ItemContainer";
-// import '../styles/App.css';
-
+import "../styles/App.scss";
+import HomePage from "../pages/HomePage";
+import AccountPage from "../pages/AccountPage";
+import CartPage from "../pages/CartPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="Nav">
-        <Sidebar></Sidebar>
-        <SearchBar></SearchBar>
-        <Account></Account>
-        <Cart></Cart>
-        <a href="/">Nozama</a>
-      </header>
- 
-      <div>
-        <HeaderSlider></HeaderSlider>
-        <ItemContainer></ItemContainer>
-      </div>
-      <Footer/> 
-
-    </div>   
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/account" element={<AccountPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="*" element={<div>404: Not Found</div>} />
+      </Routes>
+    </Router>
   );
 }
 
