@@ -1,12 +1,12 @@
 import '../styles/App.scss';
 import SearchBar from './searchbar';
-import TestAPI from './TestAPI';
 import Footer from './Footer';
 import HeaderSlider from './HeaderSlider';
 import Account from './account';
 import Cart from './Cart';
-
 import Sidebar from './Sidebar';
+import ItemContainer from "./ItemContainer";
+// import '../styles/App.css';
 
 function App() {
   return (
@@ -16,12 +16,13 @@ function App() {
         <SearchBar></SearchBar>
         <Account></Account>
         <Cart></Cart>
-        <a href="/">Allie Finsta</a>
+        <a href="/">Nozama</a>
       </header>
-      <HeaderSlider></HeaderSlider>
-      <main>
-      </main>  
-      <TestAPI></TestAPI>  
+ 
+      <div>
+        <HeaderSlider></HeaderSlider>
+        <ItemContainer></ItemContainer>
+      </div>
       <Footer/> 
 
     </div>   
