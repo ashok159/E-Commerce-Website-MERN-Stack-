@@ -1,17 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-const ItemComponent = ({title, description, price, image, rating}) => {
+const ItemComponent = ({ title, description, price, image, rating }) => {
   return (
-    <div className='card'>
-      <img src = {image} className="card__image" alt="card"></img> 
-      <div className='card__body'>
-        <a className='card__title'>{title}</a>
-        <p className='card__description'>{description}</p>
-        <h3 className='card__price'>${price}</h3>
-        <button className='card__btn'>Add to Cart</button>
-      </div>
+    <div className="card">
+      <Link to="/product">
+        <img src={image} className="card__image" alt="card"></img>
+      </Link>
+      <Link to="/product" className="card__body">
+        <a className="card__title">{title}</a>
+        <p className="card__description">{description}</p>
+        <h3 className="card__price">${price}</h3>
+        <button className="card__btn">View More</button>
+      </Link>
     </div>
-  )
-}
+  );
+};
 
-export default ItemComponent
+export default ItemComponent;
