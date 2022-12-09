@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ProductPage from "../pages/ProductPage";
 
-const ItemComponent = ({ title, description, price, image, rating }) => {
+
+const ItemComponent = ({ itemID, title, description, price, image, rating }) => {
   return (
     <div className="card">
-      <Link to={`/product/${title}`}>
+      <Link to={`/item/${itemID}`}>
         <img src={image} className="card__image" alt="card"></img>
       </Link>
-      <Link to={`/product/${title}`} className="card__body">
+      <Link to={`/item/${itemID}`} className="card__body">
         <a className="card__title">{title}</a>
         <p className="card__description">{description}</p>
         <h3 className="card__price">${price}</h3>

@@ -15,6 +15,16 @@ app.get('/products', (req, res) => {
     }
     );
 });
+app.get('/item/:id', (req, res) => {
+  const id = req.params;
+  request(`https://dummyjson.com/products/${id.id}`, function(error, response, body){
+      if(!error && response.statusCode == 200){
+          var parsedBody = JSON.parse(body);
+          res.send(parsedBody)
+      }
+  }
+  );
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

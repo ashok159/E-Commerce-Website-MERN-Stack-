@@ -26,7 +26,7 @@ export default class ListOfProducts extends Component {
                     {this.state.listOfProducts.map(item=>{
                         return(
                             <ItemComponent
-                                key = {item.id}
+                                itemID = {item.id}
                                 title = {item.title}
                                 description = {item.description}
                                 price = {item.price}
