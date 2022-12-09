@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import HeaderSlider from "../components/HeaderSlider";
 import Account from "../components/account";
 import Cart from "../components/Cart";
-
 import Sidebar from "../components/Sidebar";
 
 function HomePage() {
