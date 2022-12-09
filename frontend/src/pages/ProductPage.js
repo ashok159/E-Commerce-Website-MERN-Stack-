@@ -9,13 +9,13 @@ function ProductPage() {
   const { name } = useParams();
   return (
     <div className="App">
-      <header className="Nav">
+      {/* <header className="Nav">
         <Sidebar></Sidebar>
         <SearchBar></SearchBar>
         <Account></Account>
         <Cart></Cart>
         <a href="/">Allie Finsta</a>
-      </header>
+      </header> */}
       <main>
         <h1>Product Page</h1>
         <p>Product Name: {name}</p>

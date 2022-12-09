@@ -1,8 +1,8 @@
 import "../styles/App.scss";
-import SearchBar from "../components/searchbar";
 import TestAPI from "../components/ItemContainer";
 import Footer from "../components/Footer";
 import HeaderSlider from "../components/HeaderSlider";
+import SearchBar from "../components/searchbar";
 import Account from "../components/account";
 import Cart from "../components/Cart";
 import Sidebar from "../components/Sidebar";
@@ -10,13 +10,13 @@ import Sidebar from "../components/Sidebar";
 function HomePage() {
   return (
     <div className="App">
-      <header className="Nav">
+      {/* <header className="Nav">
         <Sidebar></Sidebar>
         <SearchBar></SearchBar>
         <Account></Account>
         <Cart></Cart>
         <a href="/">Allie Finsta</a>
-      </header>
+      </header> */}
       <HeaderSlider></HeaderSlider>
       <main></main>
       <TestAPI></TestAPI>
