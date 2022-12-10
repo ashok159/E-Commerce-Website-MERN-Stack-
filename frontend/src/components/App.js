@@ -6,9 +6,13 @@ import AccountPage from "../pages/AccountPage";
 import CartPage from "../pages/CartPage";
 import ProductPage from "../pages/ProductPage";
 import {Routes, Route, Link } from "react-router-dom";
+import Categories from "./Categories";
+import CategoryPage from "../pages/CategoryPage";
 function App() {
   return (
     <div>
+      <Categories></Categories>
+
       <header className="Nav">
         <Sidebar></Sidebar>
         <SearchBar></SearchBar>
@@ -16,7 +20,7 @@ function App() {
         <Link to="/cart">
           <img src="https://img.icons8.com/ios/40/000000/shopping-cart.png" />
         </Link>
-        <Link to="/">Allie Finsta</Link>
+        <Link to="/">Nozoma</Link>
       </header>
 
         <Routes>
@@ -24,6 +28,7 @@ function App() {
           <Route path="/account" element={<AccountPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/item/:id" element={<ProductPage />} />
+          <Route path="/category/:category" element={<CategoryPage />} />
           <Route path="*" element={<div>404: Not Found</div>} />
         </Routes>
     </div>

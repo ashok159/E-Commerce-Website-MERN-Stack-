@@ -16,8 +16,27 @@ app.get('/products', (req, res) => {
     );
 });
 app.get('/item/:id', (req, res) => {
-  const id = req.params;
-  request(`https://dummyjson.com/products/${id.id}`, function(error, response, body){
+  const params = req.params;
+  request(`https://dummyjson.com/products/${params.id}`, function(error, response, body){
+      if(!error && response.statusCode == 200){
+          var parsedBody = JSON.parse(body);
+          res.send(parsedBody)
+      }
+  }
+  );
+});
+app.get('/listcategories', (req, res) => {
+  request(`https://dummyjson.com/products/categories`, function(error, response, body){
+      if(!error && response.statusCode == 200){
+          var parsedBody = JSON.parse(body);
+          res.send(parsedBody)
+      }
+  }
+  );
+});
+app.get('/searchcategory/:categories', (req, res) => {
+  const params = req.params;
+  request(`https://dummyjson.com/products/category/${params.category}`, function(error, response, body){
       if(!error && response.statusCode == 200){
           var parsedBody = JSON.parse(body);
           res.send(parsedBody)
