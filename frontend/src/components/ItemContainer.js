@@ -12,7 +12,7 @@ export default class ListOfProducts extends Component {
 
     componentDidMount = () =>{
         axios.get("/products").then(response => {
-            console.log(response.data)
+            // console.log(response.data)
             this.setState({
                 listOfProducts: response.data
         });

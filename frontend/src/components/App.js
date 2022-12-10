@@ -7,7 +7,7 @@ import HomePage from "../pages/HomePage";
 import AccountPage from "../pages/AccountPage";
 import CartPage from "../pages/CartPage";
 import ProductPage from "../pages/ProductPage";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
     <div>
@@ -19,7 +19,6 @@ function App() {
         <a href="/">Allie Finsta</a>
       </header>
 
-      {/* <Router> */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/account" element={<AccountPage />} />
@@ -27,7 +26,6 @@ function App() {
           <Route path="/item/:id" element={<ProductPage />} />
           <Route path="*" element={<div>404: Not Found</div>} />
         </Routes>
-      {/* </Router> */}
     </div>
   );
 }
