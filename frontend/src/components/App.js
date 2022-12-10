@@ -1,7 +1,5 @@
 import "../styles/App.scss";
 import SearchBar from "../components/searchbar";
-import Account from "../components/account";
-import Cart from "../components/Cart";
 import Sidebar from "../components/Sidebar";
 import HomePage from "../pages/HomePage";
 import AccountPage from "../pages/AccountPage";
@@ -14,9 +12,11 @@ function App() {
       <header className="Nav">
         <Sidebar></Sidebar>
         <SearchBar></SearchBar>
-        <Account></Account>
-        <Cart></Cart>
-        <a href="/">Allie Finsta</a>
+        <Link to="/account">Your Account</Link>
+        <Link to="/cart">
+          <img src="https://img.icons8.com/ios/40/000000/shopping-cart.png" />
+        </Link>
+        <Link to="/">Allie Finsta</Link>
       </header>
 
         <Routes>

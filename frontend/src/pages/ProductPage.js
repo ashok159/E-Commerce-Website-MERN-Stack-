@@ -1,7 +1,5 @@
 import SearchBar from "../components/searchbar";
 import Footer from "../components/Footer";
-import Account from "../components/account";
-import Cart from "../components/Cart";
 import Sidebar from "../components/Sidebar";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
