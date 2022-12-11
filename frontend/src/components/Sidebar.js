@@ -8,9 +8,9 @@ function Sidebar() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-      axios.get(`/listcategories`).then((response) => {
-        setList(response.data);
-      });
+    axios.get(`/listcategories`).then((response) => {
+      setList(response.data);
+    });
   }, []);
 
   return (
@@ -32,7 +32,14 @@ function Sidebar() {
               </button>
               {list.map((category, key) => {
                 return (
-                  <Link to={`/category/${category}`}><li key={key} className="row"> <div >{category.charAt(0).toUpperCase() + category.slice(1)}</div> </li></Link>
+                  <Link to={`/category/${category}`}>
+                    <li key={key} className="row">
+                      {" "}
+                      <div>
+                        {category.charAt(0).toUpperCase() + category.slice(1)}
+                      </div>{" "}
+                    </li>
+                  </Link>
                 );
               })}
             </ul>

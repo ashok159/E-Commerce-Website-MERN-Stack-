@@ -4,11 +4,22 @@ import Sidebar from "../components/Sidebar";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "../styles/ProductPage.css";
 
 function ProductPage() {
   const { id } = useParams();
   const [itemData, setItemdata] = useState([]);
   const [image, setImage] = useState([]);
+
+  function addToCart() {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (cart === null) {
+      cart = [];
+    }
+    cart.push(itemData);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    console.log(cart);
+  }
 
   useEffect(() => {
     axios.get(`/item/${id}`).then((response) => {
@@ -28,7 +39,14 @@ function ProductPage() {
         <h3>Rating: {itemData.rating}/5</h3>
         <h3>${itemData.price}</h3>
         <h3>Items Remaining: {itemData.stock}</h3>
-        <button>Add to Cart</button>
+        <button
+          onClick={() => {
+            alert("Item added to cart!");
+            addToCart();
+          }}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );
