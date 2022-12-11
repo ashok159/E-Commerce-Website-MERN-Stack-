@@ -29,7 +29,7 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/item/:id" element={<ProductPage />} />
           <Route path="/category/:category" element={<CategoryPage />} />
-          <Route path="*" element={<div>404:  Not Found</div>} />
+          <Route path="*" element={<div>404: Not Found</div>} />
         </Routes>
     </div>
   );
