@@ -1,15 +1,23 @@
 import "../styles/Sidebar.css";
-import { SidebarData } from "./SidebarData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+      axios.get(`/listcategories`).then((response) => {
+        setList(response.data);
+      });
+  }, []);
 
   return (
     <>
       {!sidebar ? (
         <button onClick={() => setSidebar(!sidebar)} className="menu-btn">
-          Shop by Department
+          Shop by Category
         </button>
       ) : (
         <>
@@ -22,18 +30,9 @@ function Sidebar() {
               >
                 X
               </button>
-              {SidebarData.map((val, key) => {
+              {list.map((category, key) => {
                 return (
-                  <li
-                    key={key}
-                    className="row"
-                    onClick={() => {
-                      window.location.pathname = val.path;
-                    }}
-                  >
-                    {" "}
-                    <div id="title">{val.title}</div>{" "}
-                  </li>
+                  <Link to={`/category/${category}`}><li key={key} className="row"> <div >{category.charAt(0).toUpperCase() + category.slice(1)}</div> </li></Link>
                 );
               })}
             </ul>

@@ -36,7 +36,17 @@ app.get('/listcategories', (req, res) => {
 });
 app.get('/searchcategory/:categories', (req, res) => {
   const params = req.params;
-  request(`https://dummyjson.com/products/category/${params.category}`, function(error, response, body){
+  request(`https://dummyjson.com/products/category/${params.categories}`, function(error, response, body){
+      if(!error && response.statusCode == 200){
+          var parsedBody = JSON.parse(body);
+          res.send(parsedBody)
+      }
+  }
+  );
+});
+app.get('/searchbar/:input', (req, res) => {
+  const params = req.params;
+  request(`https://dummyjson.com/products/search?q=${params.input}`, function(error, response, body){
       if(!error && response.statusCode == 200){
           var parsedBody = JSON.parse(body);
           res.send(parsedBody)

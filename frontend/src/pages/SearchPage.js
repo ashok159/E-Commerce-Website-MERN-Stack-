@@ -1,23 +1,22 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import React, { Component } from 'react'
 import axios from "axios";
 import ItemComponent from "../components/ItemComponent";
 
-function CategoryPage() {
-    const { category } = useParams();
-    const [list, setList] = useState([]);
+
+function SearchPage() {
+    const { searchEntry } = useParams();
+    const [list, setList] = useState([])
 
     useEffect(() => {
-        axios.get(`/searchcategory/${category}`).then((response) => {
-        //   console.log(response.data.products);
+        axios.get(`/searchbar/${searchEntry}`).then((response) => {
+            // console.log(response.data.products);
           setList(response.data.products);
         });
-      }, [category]);
+    }, [searchEntry]);
 
-
-    return(
-        <div className="item-containers">
+    return (
+        <div className="item-container">
             {
                 list.map(item=>{
                     return(
@@ -33,12 +32,7 @@ function CategoryPage() {
                 })
             }
         </div>
-    )
+    );
 }
 
-
-
-export default CategoryPage;
-
-
-
+export default SearchPage;

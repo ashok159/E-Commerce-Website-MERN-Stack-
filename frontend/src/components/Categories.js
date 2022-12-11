@@ -7,7 +7,6 @@ const Categories = () => {
 
     useEffect(() => {
         axios.get(`/listcategories`).then((response) => {
-          // console.log(response.data);
           setList(response.data);
         });
     }, []);

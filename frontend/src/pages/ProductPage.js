@@ -12,7 +12,7 @@ function ProductPage() {
 
   useEffect(() => {
     axios.get(`/item/${id}`).then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setItemdata(response.data);
       setImage(response.data.images);
     });
@@ -30,7 +30,6 @@ function ProductPage() {
         <h3>Items Remaining: {itemData.stock}</h3>
         <button>Add to Cart</button>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -9,7 +9,6 @@ function HomePage() {
     <div className="App">
       <HeaderSlider></HeaderSlider>
       <ItemContainer></ItemContainer>
-      <Footer />
     </div>
   );
 }
