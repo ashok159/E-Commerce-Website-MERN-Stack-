@@ -17,7 +17,7 @@ function CategoryPage() {
 
 
     return(
-        <div className="item-containers">
+        <div className="item-container">
             {
                 list.map(item=>{
                     return(
