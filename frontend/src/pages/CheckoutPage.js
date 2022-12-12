@@ -30,10 +30,12 @@ function CheckoutPage() {
     } else if (!email.match(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/)) {
       alert("Please enter valid information");
       document.getElementById("email").style.borderColor = "red";
-    } else if (!address.match(/^[a-zA-Z0-9]+$/)) {
-      alert("Please enter valid information");
-      document.getElementById("address").style.borderColor = "red";
-    } else if (!city.match(/^[a-zA-Z]+$/)) {
+    }
+    // else if (!address.match(/^[a-zA-Z0-9]+$/)) {
+    //   alert("Please enter valid information");
+    //   document.getElementById("address").style.borderColor = "red";
+    //} 
+    else if (!city.match(/^[a-zA-Z]+$/)) {
       alert("Please enter valid information");
       document.getElementById("city").style.borderColor = "red";
     } else if (!postalCode.match(/^[0-9]{5}(?:-[0-9]{4})?$/)) {
@@ -59,7 +61,7 @@ function CheckoutPage() {
   return (
     <div className="checkout-page">
       <div className="Address">
-        <h1>Shipping Address</h1>
+        <h1 class="address-title">Shipping Address</h1>
         <form className="address-form">
           <label htmlFor="name">Name</label>
           <input type="text" id="name" placeholder="Enter name" />
@@ -74,7 +76,7 @@ function CheckoutPage() {
         </form>
       </div>
       <div className="Payment">
-        <h1>Payment Method</h1>
+        <h1 className="payment-title">Payment Method</h1>
         <form className="payment-form">
           <label htmlFor="cardNumber">Card Number</label>
           <input type="text" id="cardNumber" placeholder="Enter card number" />
