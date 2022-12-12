@@ -4,10 +4,10 @@
   left: 0;
   bottom: 0;
   width: 250px;
-  background: bisque;
+  background: white;
   border-right: 1px solid #eee;
   overflow-y: auto;
-  z-index: 1;
+  z-index: 2;
   display: flex;
 }
 
@@ -35,15 +35,16 @@
 }
 
 .menu-btn {
-  background: bisque;
+  background: transparent;
   border: none;
 }
 
 .close-btn {
-  background: bisque;
+  background: biwhsque;
   border: none;
   padding-top: 30px;
   font-size: 1.5rem;
+  width: 100%;
 }
 
 .close-btn:hover {
@@ -52,5 +53,9 @@
 
 .menu-btn:hover {
   cursor: pointer;
-  background: #eee;
+  color: rgb(220, 57, 59);
+}
+
+.shop-category-btn{
+  font-size: 1.5rem;
 }

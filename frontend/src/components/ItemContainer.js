@@ -22,6 +22,7 @@ export default class ListOfProducts extends Component {
     render() {
         return (
             <div className="product-container">
+                <div className='product-container-title'>All Products:</div>
                 <div className="item-container">
                     {this.state.listOfProducts.map(item=>{
                         return(

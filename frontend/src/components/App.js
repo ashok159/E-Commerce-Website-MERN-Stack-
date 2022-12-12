@@ -11,6 +11,9 @@ import Categories from "./Categories";
 import CategoryPage from "../pages/CategoryPage";
 import SearchPage from "../pages/SearchPage";
 import CheckoutPage from "../pages/CheckoutPage";
+import ImageSlides from "./ImageSlides";
+import Slider from "react-slick";
+import SliderContainer from "./SliderContainer";
 function App() {
   return (
     <div>
@@ -18,14 +21,16 @@ function App() {
 
       <header className="Nav">
         <Sidebar></Sidebar>
-        <Link to="/">Nozama</Link>
+        <Link to="/"><h1 className="site-name">NOZAMA</h1></Link>
         <SearchBar></SearchBar>
-        <Link to="/account">Your Account</Link>
+        <Link to="/account"><div className="site-account-btn">Your Account</div></Link>
         <Link to="/cart">
+          <div className="site-cart-btn">
           <img src="https://img.icons8.com/ios/40/000000/shopping-cart.png" />
+          </div>
         </Link>
       </header>
-
+      
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/account" element={<AccountPage />} />

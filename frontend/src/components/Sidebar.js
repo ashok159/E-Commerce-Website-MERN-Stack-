@@ -17,11 +17,11 @@ function Sidebar() {
     <>
       {!sidebar ? (
         <button onClick={() => setSidebar(!sidebar)} className="menu-btn">
-          Shop by Category
+          <div className="shop-category-btn">Shop by Category</div>
         </button>
       ) : (
         <>
-          <button>hello</button>
+          <button></button>
           <div className="Sidebar">
             <ul className="SidebarList">
               <button

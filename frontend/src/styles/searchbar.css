@@ -5,7 +5,8 @@
 .SearchBar input {
   border-radius: 50px;
   border: 1px solid black;
-  padding: 5px;
+  padding: 5px 10px;
+  font-size: 1.2rem
 }
 
 .searchIcon {

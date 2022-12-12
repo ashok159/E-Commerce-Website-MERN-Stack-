@@ -30,23 +30,32 @@ function ProductPage() {
   }, []);
 
   return (
-    <div className="App">
-      <div className="product_page">
-        <h3>Brand: {itemData.brand}</h3>
-        <img src={image[0]} alt="product" />
-        <h1>{itemData.title}</h1>
-        <h2>{itemData.description}</h2>
-        <h3>Rating: {itemData.rating}/5</h3>
-        <h3>${itemData.price}</h3>
-        <h3>Items Remaining: {itemData.stock}</h3>
-        <button
-          onClick={() => {
-            alert("Item added to cart!");
-            addToCart();
-          }}
-        >
-          Add to Cart
-        </button>
+    <div>
+      <div className="product-page-container">
+        <div className="product-page-img">
+          <img src={image[0]} alt="product" />
+        </div>
+        <div className="product_page_text">
+          <h1 className="product-page-title">{itemData.title}</h1>
+          <div className="product-page-price">${itemData.price}</div>
+          <div className="product-page-discount">-{itemData.discountPercentage}% OFF ORIGINAL PRICE</div>
+          <div className="product-page-rating">Rating: {itemData.rating} (5)</div>
+          <button 
+            className="product-page-cart-button"
+            onClick={() => {
+              alert("Item added to cart!");
+              addToCart();
+            }}
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <div className="product-page-bottom">
+        <h4 className="product-page-bottom-title">More Details:</h4>
+        <div>Brand: {itemData.brand}</div>
+        <div>Description: {itemData.description}</div>
+        <div>Items Remaining: {itemData.stock}</div>
       </div>
     </div>
   );
