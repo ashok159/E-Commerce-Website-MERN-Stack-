@@ -14,6 +14,7 @@ import CheckoutPage from "../pages/CheckoutPage";
 import ImageSlides from "./ImageSlides";
 import Slider from "react-slick";
 import SliderContainer from "./SliderContainer";
+
 function App() {
   return (
     <div>
