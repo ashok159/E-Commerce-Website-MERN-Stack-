@@ -24,26 +24,40 @@ function CartPage() {
   }
 
   return (
-    <div className="cart">
-      <h1>Your Cart</h1>
-      {cart.map((item) => (
-        <div className="item-display">
-          <img src={item.thumbnail} alt="product" />
-          <h3>{item.title}</h3>
-          <h3>Price: ${item.price}</h3>
-          <button
-            onClick={() => {
-              removeFromCart(item.title);
-              windowRefresh();
-              alert("Item removed from cart!");
-            }}
-          >
-            Remove from Cart
-          </button>
-          <h3>--------------------------------------</h3>
+    <div className="cart-page">
+      <div className="items-in-cart">
+        <div className="cart-title">SHOPPING CART</div>
+        {cart.map((item) => (
+          <div className="item-display">
+            <Link to={`/item/${item.id}`}><img src={item.thumbnail} alt="product" className="cart-item-image"/></Link>
+            <div className="cart-item-text">
+              <Link to={`/item/${item.id}`}><div className="cart-item-title">{item.title}</div></Link>
+              <div className="cart-item-price-info">
+                <div className="cross-out">${(item.price+eval(item.price*(item.discountPercentage/100))).toFixed(2).toString()}</div>
+                <div className="cart-item-price">${item.price}</div>
+              </div>
+              <button className="cart-item-btn" onClick={() => {
+                  removeFromCart(item.title);
+                  windowRefresh();
+                  alert("Item removed from cart!");
+                }}
+              >Remove</button>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="cart-sidebar">
+        <div className="cart-free-ship">You've Earned FREE SHIPPING!</div>
+        <div className="cart-total">
+          <div className="cart-total-heading">Subtotal:</div>
+          <div className="cart-total-price">&...</div>
         </div>
-      ))}
-      <Link to="/checkout">Checkout</Link>
+        <Link to="/checkout"><button className="checkout-btn">Checkout</button></Link>
+        <div className="cart-sidebar-end1">Don’t Miss Out!</div>
+        <div className="cart-sidebar-end2">Items in bag are not held and may sell out</div>
+        <div className="cart-help-title">NEED SOME HELP?</div>
+        <div className="cart-help-text"><Link className="cart-help-link">Contact Us</Link>. And we'd love to help!</div>
+      </div>
     </div>
   );
 }

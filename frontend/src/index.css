@@ -108,7 +108,9 @@ code {
   }
 }
 
-
+.quickLinksSmallContainer img{
+  width: 90%;
+}
 .quick-link-container-title{
   font-size: 2.5rem;
   padding: 15px 0px;

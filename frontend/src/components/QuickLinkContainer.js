@@ -16,7 +16,7 @@ const QuickLinkContainer = () => {
         {/* <QuickLinks></QuickLinks> */}
         <Link to="/item/2"><div className='quickLinksSmallContainer'>
           <img src="http://localhost:3000/iphonex.webp"></img>
-          <div className='quick-links-title'>Iphone X</div>
+          <div className='quick-links-title'>iPhone X</div>
           <Link to="/item/2"><button className='quick-links-btn'>Shop Deal</button></Link>
         </div></Link>
         <Link to="/item/8"><div className='quickLinksSmallContainer'>
@@ -36,7 +36,7 @@ const QuickLinkContainer = () => {
         </div></Link>
         <Link to="/item/1"><div className='quickLinksSmallContainer'>
           <img src="http://localhost:3000/iphone9.webp"></img>
-          <div className='quick-links-title'>Iphone XR</div>
+          <div className='quick-links-title'>iPhone XR</div>
           <Link to="/item/1"><button className='quick-links-btn'>Shop Deal</button></Link>
         </div></Link>
         <Link to="/item/7"><div className='quickLinksSmallContainer'>
