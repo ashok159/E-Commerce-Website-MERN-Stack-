@@ -14,6 +14,9 @@ import CheckoutPage from "../pages/CheckoutPage";
 import ImageSlides from "./ImageSlides";
 import Slider from "react-slick";
 import SliderContainer from "./SliderContainer";
+import ContactUsPage from "../pages/ContactUsPage";
+import TermsPage from "../pages/TermsPage";
+import PrivacyPage from "../pages/PrivacyPage";
 
 function App() {
   return (
@@ -43,10 +46,13 @@ function App() {
           element={<SearchPage></SearchPage>}
         />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path ="/contact" element={<ContactUsPage />} />
+        <Route path ="/privacy" element={<PrivacyPage />} />
+        <Route path = "/terms" element= {<TermsPage />} />
         <Route path="*" element={<div>404: Not Found</div>} />
       </Routes>
 
-      {/*<Footer />*/}
+      <Footer />
     </div>
   );
 }

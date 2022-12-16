@@ -1,0 +1,33 @@
+
+
+.terms-header {
+    /* Style the page content */
+    width: 800px;
+    padding: 20px;
+    background-color: white;
+    margin: auto;
+}
+.terms-content
+{
+    /* Style the page content */
+    width: 800px;
+    padding: 20px;
+    background-color: white;
+    margin: auto;
+}
+
+/* Style the page heading */
+ h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+}
+
+/* Style the page subheading */
+ h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+  

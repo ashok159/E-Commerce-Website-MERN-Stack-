@@ -13,7 +13,6 @@ function HomePage() {
       <SliderContainer></SliderContainer>
       <QuickLinkContainer></QuickLinkContainer>
       <ItemContainer></ItemContainer>
-      <Footer></Footer>
     </div>
 
   );
