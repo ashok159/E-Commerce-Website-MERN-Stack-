@@ -14,16 +14,37 @@
 .address-form input {
   border: 1px solid black;
   width: 300px;
+  border-radius: 10px;
 }
 
 .payment-form input {
   border: 1px solid black;
   width: 300px;
+  border-radius: 10px;
 }
 
-.address-title{
+.submit-btn {
+  background-color: #a0d2db;
+  color: white;
+  height: 40px;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  background-color: rgb(220, 57, 59);
+}
+.address-title {
   text-align: center;
 }
-.payment-title{
+.payment-title {
   text-align: center;
+}
+
+.subtotal-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(220, 57, 59);
+  text-decoration: underline;
 }

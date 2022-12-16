@@ -2,6 +2,11 @@ import React from "react";
 import "../styles/CheckoutPage.css";
 
 function CheckoutPage() {
+  let subtotal = 0;
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  for (let i = 0; i < cart.length; i++) {
+    subtotal += cart[i].price;
+  }
   function checkInfo() {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
@@ -12,6 +17,16 @@ function CheckoutPage() {
     const cardName = document.getElementById("cardName").value;
     const expiryDate = document.getElementById("expiryDate").value;
     const cvv = document.getElementById("cvv").value;
+    //default all fields to black
+    document.getElementById("name").style.borderColor = "black";
+    document.getElementById("email").style.borderColor = "black";
+    document.getElementById("address").style.borderColor = "black";
+    document.getElementById("city").style.borderColor = "black";
+    document.getElementById("postalCode").style.borderColor = "black";
+    document.getElementById("cardNumber").style.borderColor = "black";
+    document.getElementById("cardName").style.borderColor = "black";
+    document.getElementById("expiryDate").style.borderColor = "black";
+    document.getElementById("cvv").style.borderColor = "black";
     if (
       name === "" ||
       email === "" ||
@@ -34,7 +49,7 @@ function CheckoutPage() {
     // else if (!address.match(/^[a-zA-Z0-9]+$/)) {
     //   alert("Please enter valid information");
     //   document.getElementById("address").style.borderColor = "red";
-    //} 
+    //}
     else if (!city.match(/^[a-zA-Z]+$/)) {
       alert("Please enter valid information");
       document.getElementById("city").style.borderColor = "red";
@@ -55,6 +70,7 @@ function CheckoutPage() {
       document.getElementById("cvv").style.borderColor = "red";
     } else {
       alert("Thank you for your purchase!");
+      localStorage.removeItem("cart");
       window.location.href = "/";
     }
   }
@@ -90,7 +106,15 @@ function CheckoutPage() {
           />
           <label htmlFor="cvv">CVV</label>
           <input type="text" id="cvv" placeholder="Enter CVV" />
-          <input type="button" onClick={checkInfo} value="Submit" />
+          <div className="subtotal">
+            <p className="subtotal-title">Subtotal: ${subtotal}.00</p>
+          </div>
+          <input
+            type="button"
+            className="submit-btn"
+            onClick={checkInfo}
+            value="Submit"
+          />
         </form>
       </div>
     </div>

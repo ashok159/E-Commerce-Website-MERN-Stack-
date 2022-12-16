@@ -7,6 +7,10 @@ function CartPage() {
   if (cart === null) {
     cart = [];
   }
+  let subtotal = 0;
+  for (let i = 0; i < cart.length; i++) {
+    subtotal += cart[i].price;
+  }
 
   function windowRefresh() {
     window.location.reload();
@@ -23,25 +27,49 @@ function CartPage() {
     console.log(cart.length);
   }
 
+  function goToCheckout() {
+    window.location.href = "/checkout";
+  }
+
   return (
     <div className="cart-page">
       <div className="items-in-cart">
         <div className="cart-title">SHOPPING CART</div>
         {cart.map((item) => (
           <div className="item-display">
-            <Link to={`/item/${item.id}`}><img src={item.thumbnail} alt="product" className="cart-item-image"/></Link>
+            <Link to={`/item/${item.id}`}>
+              <img
+                src={item.thumbnail}
+                alt="product"
+                className="cart-item-image"
+              />
+            </Link>
             <div className="cart-item-text">
-              <Link to={`/item/${item.id}`}><div className="cart-item-title">{item.title}</div></Link>
+              <Link to={`/item/${item.id}`}>
+                <div className="cart-item-title">{item.title}</div>
+              </Link>
               <div className="cart-item-price-info">
-                <div className="cross-out">${(item.price+eval(item.price*(item.discountPercentage/100))).toFixed(2).toString()}</div>
+                <div className="cross-out">
+                  $
+                  {(
+                    item.price +
+                    eval(item.price * (item.discountPercentage / 100))
+                  )
+                    .toFixed(2)
+                    .toString()}
+                </div>
                 <div className="cart-item-price">${item.price}</div>
               </div>
-              <button className="cart-item-btn" onClick={() => {
+              <button
+                className="cart-item-btn"
+                onClick={() => {
                   removeFromCart(item.title);
                   windowRefresh();
                   alert("Item removed from cart!");
                 }}
-              >Remove</button>
+              >
+                Remove
+              </button>
             </div>
           </div>
         ))}
@@ -49,14 +77,27 @@ function CartPage() {
       <div className="cart-sidebar">
         <div className="cart-free-ship">You've Earned FREE SHIPPING!</div>
         <div className="cart-total">
-          <div className="cart-total-heading">Subtotal:</div>
-          <div className="cart-total-price">&...</div>
+          <div className="cart-total-heading">Subtotal: ${subtotal}.00</div>
         </div>
-        <Link to="/checkout"><button className="checkout-btn">Checkout</button></Link>
+        <button
+          className="checkout-btn"
+          onClick={() => {
+            if (cart.length === 0) {
+              alert("No items in cart!");
+            } else goToCheckout();
+          }}
+        >
+          Checkout
+        </button>
         <div className="cart-sidebar-end1">Don’t Miss Out!</div>
-        <div className="cart-sidebar-end2">Items in bag are not held and may sell out</div>
+        <div className="cart-sidebar-end2">
+          Items in bag are not held and may sell out
+        </div>
         <div className="cart-help-title">NEED SOME HELP?</div>
-        <div className="cart-help-text"><Link className="cart-help-link">Contact Us</Link>. And we'd love to help!</div>
+        <div className="cart-help-text">
+          <Link className="cart-help-link">Contact Us</Link>. And we'd love to
+          help!
+        </div>
       </div>
     </div>
   );
