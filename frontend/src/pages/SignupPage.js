@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../styles/AccountPage.css";
-import { Link } from "react-router-dom";
+import "../styles/SignupPage.css";
 
-export default function AccountPageLoginIn() {
-
-  const [user, setInfo] = useState({
+export default function AccountPageSignUp() {
+  const [newUser, setInfo] = useState({
     name: '',
     password: ''
   });
@@ -25,64 +23,57 @@ export default function AccountPageLoginIn() {
 
   let sendUser = (event) => {
     event.preventDefault();
-  
+
     let payload = {
-      name : user.name,
-      password: user.password
+      name : newUser.name,
+      password: newUser.password
     }
 
     axios({
-      url: '/api/account/auth',
+      url: '/api/account/signup',
       method: 'POST',
       data: payload
     })
-    .then((result) => {
-      console.log(result);
-      if(result.data === 'found'){
-        navigate('/');
-      }else{
-        alert('User not found');
-      }
-    })
-}
+      .then(() => {
+        navigate('/account');
+      })
+  }
 
   return (
-    <div className="Login">
+    <div className="Signup">
       <main>
-        <h1>Account Page</h1>
+        <h1>Sign Up</h1>
         <p>Enter your account details below</p>
         <form onSubmit={sendUser}>
-        <div className="login-name">
-        <label for="name">Name</label>
+          <div className="signup-name">
+              <label for="name">Name</label>
           <br />
           <input 
             type="text" 
             id="name" 
             name="name" 
-            value={user.name}
+            value={newUser.name}
             onChange={handleChange} 
           />
           </div>
           <br />
-          <div className="login-password">
+          <div className="signup-password">
           <label for = "password">Password</label>
           <br />
           <input 
             type="password" 
             id="password" 
             name="password" 
-            value={user.password}
+            value={newUser.password}
             onChange={handleChange}  
           />
           </div>
           <br />
-          <button type="submit-buttom">Login</button>
+     
+          <button type="submit-buttom"> Submit </button>
+      
           <br />
-          <div className="register-buttom">
-          <Link to="/account/signup">Create your new account</Link>
-          </div>
-          <br />
-        </form>
+          </form>
       </main>
     </div>
   );

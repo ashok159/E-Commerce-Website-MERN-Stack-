@@ -4,6 +4,7 @@ import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import HomePage from "../pages/HomePage";
 import AccountPage from "../pages/AccountPage";
+import SignUpPage from "../pages/SignupPage";
 import CartPage from "../pages/CartPage";
 import ProductPage from "../pages/ProductPage";
 import { Routes, Route, Link } from "react-router-dom";
@@ -38,6 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/account" element={<AccountPage />} />
+        <Route path="/account/signup" element={<SignUpPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/item/:id" element={<ProductPage />} />
         <Route path="/category/:category" element={<CategoryPage />} />

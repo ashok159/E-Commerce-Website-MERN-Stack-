@@ -1,0 +1,58 @@
+.Signup{
+    text-align: center;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+  
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  form {
+    margin: 100px 0;
+  }
+  .signup-name {
+    
+      font-size: 15px;
+      font-weight: bold;
+      position: relative;
+      top: -70px;
+      left: 0;
+      width: 100%;
+  }
+  input[type="text"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 0px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+  }
+  
+  .signup-password {
+      font-size: 15px;
+      font-weight: bold;
+      position: relative;
+      top: -70px;
+      left: 0;
+      width: 100%;
+  }
+  
+  input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 0px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+  }
+
+
+  
