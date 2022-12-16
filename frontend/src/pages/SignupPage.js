@@ -30,7 +30,7 @@ export default function AccountPageSignUp() {
     }
 
     axios({
-      url: '/api/account/signup',
+      url: '/account/signup',
       method: 'POST',
       data: payload
     })

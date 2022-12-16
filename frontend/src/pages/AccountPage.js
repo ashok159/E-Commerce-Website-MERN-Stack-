@@ -32,7 +32,7 @@ export default function AccountPageLoginIn() {
     }
 
     axios({
-      url: '/api/account/auth',
+      url: '/account/auth',
       method: 'POST',
       data: payload
     })
@@ -45,6 +45,7 @@ export default function AccountPageLoginIn() {
       }
     })
 }
+
 
   return (
     <div className="Login">

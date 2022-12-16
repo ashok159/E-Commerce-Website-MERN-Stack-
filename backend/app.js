@@ -2,6 +2,51 @@ const express = require('express')
 const app = express();
 const port = 9000;
 var request = require("request");
+/*
+const path = require("path");
+const collection = require("./mongodb.js");
+
+// path to the frontend folder to pages
+const frontendPath = path.join(__dirname, "../frontend/src/pages");
+
+app.use(express.json());
+app.set("view engine", "ejs"); // can view javascript files
+app.set("views", frontendPath);
+app.use(express.urlencoded({ extended: false }));
+
+app.post("/account/auth", (req, res) => {
+  const data = req.body;
+
+  collection.exists({"name": [data.name], "password": [data.password]})
+    .then(result => {
+      if(result){
+        res.send('found')
+      }else{
+        res.send('not found')
+      }
+    })
+    .catch(error => {
+      console.log(error);
+    })
+})
+
+app.post("/account/signup", async (req, res) => {
+  const data = req.body;
+  console.log(data);
+
+  let newUser = new collection(data);
+
+  newUser.save((error) => {
+    if(error){
+      res.status(500).json({error: 'not saved'});
+      return;
+    }
+
+    return res.json({msg: 'saved'})
+  })
+  
+})
+*/
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
