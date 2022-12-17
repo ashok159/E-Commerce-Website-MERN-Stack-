@@ -19,7 +19,6 @@
   margin: 100px 0;
 }
 .login-name {
-  
     font-size: 15px;
     font-weight: bold;
     position: relative;
@@ -31,9 +30,9 @@
     width: 100%;
     padding: 12px 20px;
     margin: 0px 0;
-    display: inline-block;
     border: 1px solid #ccc;
-    box-sizing: border-box;
+    border-radius: 50px;
+    font-size: 15px;
 }
 
 .login-password {
@@ -49,57 +48,36 @@
     width: 100%;
     padding: 12px 20px;
     margin: 0px 0;
-    display: inline-block;
     border: 1px solid #ccc;
-    box-sizing: border-box;
+    border-radius: 50px;
+    font-size: 15px;
 }
 
-.register-buttom
-{
-  font-size: 20px;
-  font-weight: bold;
-  position: relative;
-  top: -70px;
-  left: 0;
-  width: 100%;
-  background-color: #ccc;
-  border-color: #ccc;
-  color: black;
-  padding: 14px 20px;
-  margin: 12px 0;
-  border: none;
-  cursor: pointer;
+.login-btn{
+  font-size: 1.2rem;
+  color: white;
+  background-color: rgb(220, 57, 59);
+  padding: 10px 80px;
+  border-radius: 50px;
   width: 100%;
 }
-.register-buttom:hover {
-  background-color: #ddd;
-  border-color: #ddd;
+.login-btn:hover{
+  background-color: black;
+  transition: all 1s ease;
 }
-.Login button[type="submit-buttom"]{
-  font-size: 20px;
-  font-weight: bold;
-  position: relative;
-  top: -70px;
-  left: 0;
-  width: 100%;
-  background-color: #e47911;
-  border-color: #e47911;
-  color: black;
-  padding: 19px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
+.register-btn{
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: black;
+  padding: 10px 80px;
+  border-radius: 50px;
   width: 100%;
 }
-.Login button[type="submit-buttom"]:hover {
-  background-color: #ff9900;
-  border-color: #ff9900;
+.register-btn:hover{
+  background-color: rgb(220, 57, 59);
+  transition: all 1s ease;
 }
-.Login button[type="submit-buttom"]:hover {
-  opacity: 0.8;
-}
-
-
 
 
 

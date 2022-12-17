@@ -54,7 +54,7 @@ export default function AccountPageLoginIn() {
         <p>Enter your account details below</p>
         <form onSubmit={sendUser}>
         <div className="login-name">
-        <label for="name">Name</label>
+        <label for="name">User Name</label>
           <br />
           <input 
             type="text" 
@@ -77,11 +77,9 @@ export default function AccountPageLoginIn() {
           />
           </div>
           <br />
-          <button type="submit-buttom">Login</button>
+          <button className="login-btn">Login</button>
           <br />
-          <div className="register-buttom">
-          <Link to="/account/signup">Create your new account</Link>
-          </div>
+          <Link to="/account/signup"><button className="register-btn">Create your new account</button></Link>
           <br />
         </form>
       </main>

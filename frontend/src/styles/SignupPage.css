@@ -31,9 +31,9 @@
       width: 100%;
       padding: 12px 20px;
       margin: 0px 0;
-      display: inline-block;
       border: 1px solid #ccc;
-      box-sizing: border-box;
+      border-radius: 50px;
+      font-size: 15px;
   }
   
   .signup-password {
@@ -49,18 +49,18 @@
       width: 100%;
       padding: 12px 20px;
       margin: 0px 0;
-      display: inline-block;
       border: 1px solid #ccc;
-      box-sizing: border-box;
+      border-radius: 50px;
+      font-size: 15px;
   }
 
   .Signup button{
-    margin-top: 30px;
     font-size: 1.2rem;
     color: white;
     background-color: rgb(220, 57, 59);
     padding: 10px 80px;
     border-radius: 50px;
+    width: 100%;
   }
   .Signup button:hover{
     background-color: black;
