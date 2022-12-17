@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import React, { Component } from 'react'
 import axios from "axios";
 import ItemComponent from "../components/ItemComponent";
+import "../styles/CategoryPage.css";
 
 function CategoryPage() {
     const { category } = useParams();
@@ -17,21 +18,24 @@ function CategoryPage() {
 
 
     return(
-        <div className="item-container">
-            {
-                list.map(item=>{
-                    return(
-                        <ItemComponent
-                        itemID = {item.id}
-                        title = {item.title}
-                        description = {item.description}
-                        price = {item.price}
-                        rating = {item.rating}
-                        image = {item.images[0]}
-                        ></ItemComponent>
-                    )
-                })
-            }
+        <div>
+            <div className="category-title"><h1>{category}</h1></div>
+            <div className="item-container">
+                {
+                    list.map(item=>{
+                        return(
+                            <ItemComponent
+                            itemID = {item.id}
+                            title = {item.title}
+                            description = {item.description}
+                            price = {item.price}
+                            rating = {item.rating}
+                            image = {item.images[0]}
+                            ></ItemComponent>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }
