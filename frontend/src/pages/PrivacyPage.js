@@ -7,14 +7,27 @@ function PrivacyPage() {
     return (
         <div className="privacy">
             <div className="privacy-header">
-                <h1>Privacy Policy</h1>
-                <br/>
-                <p>This privacy policy will explain how our organization uses the personal data we collect from you when you use our website.</p>
+                <h1>NOZOMA US</h1>
             </div>
             <div className="privacy-body">
-                <h2>What data do we collect?</h2>
-                <p>Our organization collects the following data:</p>
-                <p> First Name, Last Name, Address, City, State, Zip Code, Email, Phone Number </p>
+                <h2>PRIVACY POLICY</h2>
+                <br/>
+                <p>This privacy policy summarizes what information we collect and how we use it. It applies information we collect when you: access our technology platforms (including, but not limited to, Websites, Apps, Social Media Pages, and all other Hollister Co.-controlled properties that link to this Notice) (collectively, "Platforms"); engage with us via social media; shop online or in our stores; participate in a sweepstakes, contest, or any other promotion; complete a survey or questionnaire; participate in a focus group or other consumer or market research project; post a product review; send us any feedback, questions, comments, suggestions, or ideas; and interact with us, including but not limited to our communications with you via text message and email.</p>
+            </div>
+            <div className="privacy-body">
+                <h2>INFORMATION WE COLLECT</h2>
+                <p>We collect different types of information about you. In the past 12 months we may have collected the following information:</p>
+                <ul>
+                    <li>Location: We use various technologies to learn your geographic location, including by collecting your IP address or other device information, which may depend on your device's settings for location services.</li>
+                    <li>Device Information: We learn about your browser, device type, IP address, internet service provider, and other technical information about your device when you visit or interact with our Platforms or online ads, or open our emails.</li>
+                    <li>Contact Information: We collect contact information, which includes personal information like name, email address, phone number, and address.</li>
+                    <li>Payment Details: Your payment details can be collected and stored within your House Rewards account or collected in connection with an order, return, promotion, contest, or fundraising event.</li>
+                    <li>Call records, email records, text records, and chat logs: If you call, email, text, or chat with our customer service agents, we may keep records of those conversations.</li>
+                    <li>Shopping History: We keep track of your shopping history with us, including the items you purchase, save to My Saves or add to your shopping bag.</li>
+                    <li>Websites/Apps Interactions: We collect information about your interactions with our Platforms, including browsing and search history, pages visited, links clicked, buttons clicked, mouse movement, scroll behavior, and non-sensitive keystroke activity. This data may then be used to create a "session replay" of your interaction, which may be used to troubleshoot customer service issues, either individually or in the aggregate, to improve site functionality and to analyze user interaction. This information could include personal information, depending on what information you provide.</li>
+                    <li>Submitted Content: We collect any content you submit to our Platforms, including photos, videos, or reviews. For more details about user-generated content, check out our Endorsements and Social Media Engagement policy.</li>
+                    <li>Demographic Information: We may collect demographic details about you like birthdate, height and weight, gender, ZIP code, and other similar details.</li>
+                </ul>
             </div>
             <div className="privacy-body">
                 <h2>How do we collect your data?</h2>

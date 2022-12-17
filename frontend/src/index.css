@@ -109,8 +109,15 @@ code {
 }
 
 .quickLinksSmallContainer img{
-  width: 90%;
+  /* width: 50%; */
+  align-self: center;
 }
+@media screen and (min-width: 1440px) {
+  .quickLinksSmallContainer img{
+    width: 50%;
+  }
+}
+
 .quick-link-container-title{
   font-size: 2.5rem;
   padding: 15px 0px;

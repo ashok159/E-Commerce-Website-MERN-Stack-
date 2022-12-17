@@ -12,9 +12,6 @@ import Categories from "./Categories";
 import CategoryPage from "../pages/CategoryPage";
 import SearchPage from "../pages/SearchPage";
 import CheckoutPage from "../pages/CheckoutPage";
-import ImageSlides from "./ImageSlides";
-import Slider from "react-slick";
-import SliderContainer from "./SliderContainer";
 import ContactUsPage from "../pages/ContactUsPage";
 import TermsPage from "../pages/TermsPage";
 import PrivacyPage from "../pages/PrivacyPage";
@@ -43,10 +40,7 @@ function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/item/:id" element={<ProductPage />} />
         <Route path="/category/:category" element={<CategoryPage />} />
-        <Route
-          path="/search/:searchEntry"
-          element={<SearchPage></SearchPage>}
-        />
+        <Route path="/search/:searchEntry" element={<SearchPage></SearchPage>}/>
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path ="/contact" element={<ContactUsPage />} />
         <Route path ="/privacy" element={<PrivacyPage />} />

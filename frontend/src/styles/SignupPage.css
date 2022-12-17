@@ -9,13 +9,13 @@
   
   }
 
-  body {
+  .Signup  body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
   
-  form {
+  .Signup  form {
     margin: 100px 0;
   }
   .signup-name {
@@ -27,7 +27,7 @@
       left: 0;
       width: 100%;
   }
-  input[type="text"] {
+  .Signup input[type="text"] {
       width: 100%;
       padding: 12px 20px;
       margin: 0px 0;
@@ -45,7 +45,7 @@
       width: 100%;
   }
   
-  input[type="password"] {
+  .Signup input[type="password"] {
       width: 100%;
       padding: 12px 20px;
       margin: 0px 0;

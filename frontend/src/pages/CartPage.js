@@ -94,10 +94,7 @@ function CartPage() {
           Items in bag are not held and may sell out
         </div>
         <div className="cart-help-title">NEED SOME HELP?</div>
-        <div className="cart-help-text">
-          <Link className="cart-help-link">Contact Us</Link>. And we'd love to
-          help!
-        </div>
+        <div className="cart-help-text"><Link to="/contact"className="cart-help-link">Contact Us</Link>. And we'd love to help!</div>
       </div>
     </div>
   );

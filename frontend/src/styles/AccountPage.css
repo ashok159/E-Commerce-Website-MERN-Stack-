@@ -9,13 +9,13 @@
 
 
 }
-body {
+.Login body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-form {
+.Login form {
   margin: 100px 0;
 }
 .login-name {
@@ -27,7 +27,7 @@ form {
     left: 0;
     width: 100%;
 }
-input[type="text"] {
+.Login input[type="text"] {
     width: 100%;
     padding: 12px 20px;
     margin: 0px 0;
@@ -45,7 +45,7 @@ input[type="text"] {
     width: 100%;
 }
 
-input[type="password"] {
+.Login input[type="password"] {
     width: 100%;
     padding: 12px 20px;
     margin: 0px 0;
@@ -75,7 +75,7 @@ input[type="password"] {
   background-color: #ddd;
   border-color: #ddd;
 }
-button[type="submit-buttom"]{
+.Login button[type="submit-buttom"]{
   font-size: 20px;
   font-weight: bold;
   position: relative;
@@ -91,11 +91,11 @@ button[type="submit-buttom"]{
   cursor: pointer;
   width: 100%;
 }
-button[type="submit-buttom"]:hover {
+.Login button[type="submit-buttom"]:hover {
   background-color: #ff9900;
   border-color: #ff9900;
 }
-button[type="submit-buttom"]:hover {
+.Login button[type="submit-buttom"]:hover {
   opacity: 0.8;
 }
 
