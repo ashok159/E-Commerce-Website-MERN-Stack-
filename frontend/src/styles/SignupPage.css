@@ -54,5 +54,16 @@
       box-sizing: border-box;
   }
 
-
+  .Signup button{
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgb(220, 57, 59);
+    padding: 10px 80px;
+    border-radius: 50px;
+  }
+  .Signup button:hover{
+    background-color: black;
+    transition: all 1s ease;
+  }
   
