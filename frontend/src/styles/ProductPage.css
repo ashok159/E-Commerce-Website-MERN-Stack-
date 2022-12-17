@@ -12,7 +12,6 @@
 .product-page-container{
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .product-page-cart-button{
@@ -43,6 +42,17 @@
   width:fit-content;
   padding: 0px 5px;
   color: white;
+}
+.product-page-item-price-info{
+  display: flex;
+  align-items: center;
+}
+.product-page-cross-out{
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: line-through;
+  margin-right: 10px;
+  color: #777;
 }
 
 .product-page-bottom{

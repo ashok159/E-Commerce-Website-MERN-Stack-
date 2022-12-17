@@ -37,7 +37,18 @@ function ProductPage() {
         </div>
         <div className="product_page_text">
           <h1 className="product-page-title">{itemData.title}</h1>
-          <div className="product-page-price">${itemData.price}</div>
+          <div className="product-page-item-price-info">
+            <div className="product-page-cross-out">
+                    $
+                    {(
+                      itemData.price +
+                      eval(itemData.price * (itemData.discountPercentage / 100))
+                    )
+                      .toFixed(2)
+                      .toString()}
+            </div>
+            <div className="product-page-price">${itemData.price}</div>
+          </div>
           <div className="product-page-discount">-{itemData.discountPercentage}% OFF ORIGINAL PRICE</div>
           <div className="product-page-rating">Rating: {itemData.rating} (5)</div>
           <button 
