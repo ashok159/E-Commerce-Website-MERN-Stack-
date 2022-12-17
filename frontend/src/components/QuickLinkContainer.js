@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import QuickLinks from "../components/QuickLinks";
 import { Routes, Route, Link } from "react-router-dom";
-
-
+import "../styles/QuickLinkContainer.css";
 
 const QuickLinkContainer = () => {
     const list = [1, 2, 5, 6, 8, 9];

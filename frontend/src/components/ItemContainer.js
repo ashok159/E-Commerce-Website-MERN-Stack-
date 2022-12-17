@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ItemComponent from './ItemComponent';
 import axios from "axios"
+import "../styles/Item.css";
 
 export default class ListOfProducts extends Component {
     constructor(){
