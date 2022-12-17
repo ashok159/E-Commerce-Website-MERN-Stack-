@@ -76,46 +76,46 @@ function CheckoutPage() {
   }
   return (
     <div className="checkout-page">
-      <div className="Address">
-        <h1 class="address-title">Shipping Address</h1>
-        <form className="address-form">
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" placeholder="Enter name" />
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" placeholder="Enter email" />
-          <label htmlFor="address">Address</label>
-          <input type="text" id="address" placeholder="Enter address" />
-          <label htmlFor="city">City</label>
-          <input type="text" id="city" placeholder="Enter city" />
-          <label htmlFor="postalCode">Postal Code</label>
-          <input type="text" id="postalCode" placeholder="Enter postal code" />
-        </form>
+      <div className="address-payment-wrapper">
+        <h1 className="checkout-page-title">CheckOut</h1>
+        <div className="Address">
+          <h1 class="address-title">Shipping Address</h1>
+          <form className="address-form">
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" placeholder="Enter name" />
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" placeholder="Enter email" />
+            <label htmlFor="address">Address</label>
+            <input type="text" id="address" placeholder="Enter address" />
+            <label htmlFor="city">City</label>
+            <input type="text" id="city" placeholder="Enter city" />
+            <label htmlFor="postalCode">Postal Code</label>
+            <input type="text" id="postalCode" placeholder="Enter postal code" />
+          </form>
+        </div>
+        <div className="Payment">
+          <h1 className="payment-title">Payment Method</h1>
+          <form className="payment-form">
+            <label htmlFor="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" placeholder="Enter card number" />
+            <label htmlFor="cardName">Name on Card</label>
+            <input type="text" id="cardName" placeholder="Enter name on card" />
+            <label htmlFor="expiryDate">Expiration Date</label>
+            <input
+              type="text"
+              id="expiryDate"
+              placeholder="Enter expiration date"
+            />
+            <label htmlFor="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="Enter CVV" />
+          </form>
+        </div>
       </div>
-      <div className="Payment">
-        <h1 className="payment-title">Payment Method</h1>
-        <form className="payment-form">
-          <label htmlFor="cardNumber">Card Number</label>
-          <input type="text" id="cardNumber" placeholder="Enter card number" />
-          <label htmlFor="cardName">Name on Card</label>
-          <input type="text" id="cardName" placeholder="Enter name on card" />
-          <label htmlFor="expiryDate">Expiration Date</label>
-          <input
-            type="text"
-            id="expiryDate"
-            placeholder="Enter expiration date"
-          />
-          <label htmlFor="cvv">CVV</label>
-          <input type="text" id="cvv" placeholder="Enter CVV" />
-          <div className="subtotal">
-            <p className="subtotal-title">Subtotal: ${subtotal}.00</p>
-          </div>
-          <input
-            type="button"
-            className="submit-btn"
-            onClick={checkInfo}
-            value="Submit"
-          />
-        </form>
+      <div className="sidebar-wrapper">
+        <div className="subtotal">
+          <p className="subtotal-title">Order Total: ${subtotal}.00</p>
+        </div>
+        <input type="button" className="submit-btn" onClick={checkInfo} value="Submit"/>
       </div>
     </div>
   );
