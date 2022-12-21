@@ -1,2 +1,2 @@
 # E-Commerce-Website
-An e-commerce website developed using React, Express, MongoDB, and interaction with the DummyJSON API. Hi guys
+A collaborative project made using the MERN (MongoDB, Express, React, Node) stack to create a functional e-commerce website.
