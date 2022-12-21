@@ -1,5 +1,5 @@
 # E-Commerce-Website
-A collaborative project made using the MERN (MongoDB, Express, React, Node) stack to create a functional e-commerce website.
+A collaborative project made using the MERN (MongoDB, Express, React, Node) stack to create a functional e-commerce website that interacts with the DummyJSON API.
 
 ![Nozama](https://user-images.githubusercontent.com/78827798/208987622-ff6979ef-f0c6-459f-9d4d-a40b91dc65ff.png)
 
